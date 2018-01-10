@@ -9,7 +9,7 @@ version: "3"
 
 services:
   mongo:
-    image: albamrtalf/p4gps:db
+    image: albamrtaf/p4gps:db
     deploy:
       replicas: 1
       resources:
@@ -28,7 +28,7 @@ services:
    
   
   order:
-    image: albamrtalf/p4gps:order
+    image: albamrtaf/p4gps:order
     depends_on:
       - "mongo"
     deploy:
@@ -44,7 +44,7 @@ services:
 
   
   web:
-    image: albamrtalf/p4gps:web
+    image: albamrtaf/p4gps:web
     deploy:
       replicas: 1
       resources:
